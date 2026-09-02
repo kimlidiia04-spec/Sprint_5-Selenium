@@ -3,7 +3,7 @@ from selenium.webdriver.support import expected_conditions as EC
 
 from generators import generate_email, generate_password
 from locators import *
-from tests.constants import BASE_URL
+from constants import Url
 
 # ПРОВЕРКА УСПЕШНОЙ РЕГИСТРАЦИИ
 def test_successful_registration(driver):
@@ -18,9 +18,8 @@ def test_successful_registration(driver):
     driver.find_element(*register_password_input).send_keys(password)
     driver.find_element(*register_button).click()
 
-    WebDriverWait(driver, 10).until(EC.url_to_be(BASE_URL + "login"))
+    assert WebDriverWait(driver, 10).until(EC.url_to_be(Url.BASE_URL + "login"))
 
-    driver.quit()
 
 # ПРОВЕРКА СООБЩЕНИЯ "НЕКОРРЕКТНЫЙ ПАРОЛЬ"
 def test_registration_with_invalid_password(driver):
@@ -35,6 +34,3 @@ def test_registration_with_invalid_password(driver):
     driver.find_element(*register_button).click()
 
     assert driver.find_element(*password_error).text == "Некорректный пароль"
-
-    driver.quit()
-    

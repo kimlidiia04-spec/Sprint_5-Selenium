@@ -32,5 +32,6 @@ buns_tab = ("xpath", "//span[text()='Булки']") # раздел Булки
 sauces_tab = ("xpath", "//span[text()='Соусы']") # раздел Соусы
 fillings_tab = ("xpath", "//span[text()='Начинки']") # Раздел Начинки
 
-
-
+buns_tab_active = ("xpath", "//span[text()='Булки']/parent::*[contains(@class, 'tab_tab_type_current')]")
+sauces_tab_active = ("xpath", "//span[text()='Соусы']/parent::*[contains(@class, 'tab_tab_type_current')]")
+fillings_tab_active = ("xpath", "//span[text()='Начинки']/parent::*[contains(@class, 'tab_tab_type_current')]")
