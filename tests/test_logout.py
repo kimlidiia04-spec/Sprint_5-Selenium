@@ -7,9 +7,8 @@ from constants import Url
 # ВЫХОД ИЗ АККАУНТА
 class TestLogOut:
 
-    def test_logout(self, logged_in_driver):
-        logged_in_driver.find_element(*personal_account_button).click()
-        assert WebDriverWait(logged_in_driver, 10).until(EC.url_to_be(Url.BASE_URL + "account/profile"))
+    def test_logout(self, personal_account_driver):
+        personal_account_driver.find_element(*logout_button).click()
 
-        logged_in_driver.find_element(*logout_button).click()
-        assert WebDriverWait(logged_in_driver, 10).until(EC.url_to_be(Url.BASE_URL + "login"))
+        personal_account_driver.find_element(*logout_button).click()
+        assert WebDriverWait(personal_account_driver, 10).until(EC.url_to_be(Url.BASE_URL + "login"))

@@ -20,31 +20,31 @@
 Всего 13 тестов для браузеров Chrome и Firefox. 
 
 Все тесты пройдены в Google Chrome.
-При запуске в Mozilla Firefox один тестовый файл (test_constructor.py) завершился с тремя одинаковыми ошибками.
+При запуске в Mozilla Firefox тестовый файл test_constructor.py и test_logout.py завершились с ошибками. Всего три ошибки.
 
-tests/test_constructor.py::TestConstructor::test_personal_account[chrome] PASSED [  3%]
-tests/test_constructor.py::TestConstructor::test_personal_account[firefox] PASSED [  7%]
-tests/test_constructor.py::TestConstructor::test_constructor_from_personal_account[chrome] PASSED [ 11%]
-**tests/test_constructor.py::TestConstructor::test_constructor_from_personal_account[firefox] FAILED [ 15%]**
-tests/test_constructor.py::TestConstructor::test_logo_from_personal_account[chrome] PASSED [ 19%]
-**tests/test_constructor.py::TestConstructor::test_logo_from_personal_account[firefox] FAILED [ 23%]**
-tests/test_constructor.py::TestConstructor::test_buns_tab[chrome] PASSED [ 26%]
-**tests/test_constructor.py::TestConstructor::test_buns_tab[firefox] FAILED [ 30%]**
-tests/test_constructor.py::TestConstructor::test_sauces_tab[chrome] PASSED [ 34%]
-tests/test_constructor.py::TestConstructor::test_sauces_tab[firefox] PASSED [ 38%]
-tests/test_constructor.py::TestConstructor::test_fillings_tab[chrome] PASSED [ 42%]
-tests/test_constructor.py::TestConstructor::test_fillings_tab[firefox] PASSED [ 46%]
-tests/test_login.py::test_login_from_main_page[chrome] PASSED [ 50%]
-tests/test_login.py::test_login_from_main_page[firefox] PASSED [ 53%]
-tests/test_login.py::test_login_from_personal_account[chrome] PASSED [ 57%]
-tests/test_login.py::test_login_from_personal_account[firefox] PASSED [ 61%]
-tests/test_login.py::test_login_from_registration[chrome] PASSED [ 65%]
-tests/test_login.py::test_login_from_registration[firefox] PASSED [ 69%]
-tests/test_login.py::test_login_from_password_recovery[chrome] PASSED [ 73%]
-tests/test_login.py::test_login_from_password_recovery[firefox] PASSED [ 76%]
-tests/test_logout.py::TestLogOut::test_logout[chrome] PASSED [ 80%]
-tests/test_logout.py::TestLogOut::test_logout[firefox] PASSED [ 84%]
-tests/test_registration.py::test_successful_registration[chrome] PASSED [ 88%]
-tests/test_registration.py::test_successful_registration[firefox] PASSED [ 92%]
-tests/test_registration.py::test_registration_with_invalid_password[chrome] PASSED [ 96%]
-tests/test_registration.py::test_registration_with_invalid_password[firefox] PASSED [100%]
+tests/test_constructor.py::TestConstructor::test_personal_account[chrome] PASSED                                      [  3%]
+tests/test_constructor.py::TestConstructor::test_personal_account[firefox] PASSED                                     [  7%]
+tests/test_constructor.py::TestConstructor::test_constructor_from_personal_account[chrome] PASSED                     [ 11%]
+**tests/test_constructor.py::TestConstructor::test_constructor_from_personal_account[firefox] FAILED                    [ 15%]**
+tests/test_constructor.py::TestConstructor::test_logo_from_personal_account[chrome] PASSED                            [ 19%]
+**tests/test_constructor.py::TestConstructor::test_logo_from_personal_account[firefox] FAILED                           [ 23%]**
+tests/test_constructor.py::TestConstructor::test_buns_tab[chrome] PASSED                                              [ 26%]
+tests/test_constructor.py::TestConstructor::test_buns_tab[firefox] PASSED                                             [ 30%]
+tests/test_constructor.py::TestConstructor::test_sauces_tab[chrome] PASSED                                            [ 34%]
+tests/test_constructor.py::TestConstructor::test_sauces_tab[firefox] PASSED                                           [ 38%]
+tests/test_constructor.py::TestConstructor::test_fillings_tab[chrome] PASSED                                          [ 42%]
+tests/test_constructor.py::TestConstructor::test_fillings_tab[firefox] PASSED                                         [ 46%]
+tests/test_login.py::TestLogin::test_login_from_main_page[chrome] PASSED                                              [ 50%]
+tests/test_login.py::TestLogin::test_login_from_main_page[firefox] PASSED                                             [ 53%]
+tests/test_login.py::TestLogin::test_login_from_personal_account[chrome] PASSED                                       [ 57%]
+tests/test_login.py::TestLogin::test_login_from_personal_account[firefox] PASSED                                      [ 61%]
+tests/test_login.py::TestLogin::test_login_from_registration[chrome] PASSED                                           [ 65%]
+tests/test_login.py::TestLogin::test_login_from_registration[firefox] PASSED                                          [ 69%]
+tests/test_login.py::TestLogin::test_login_from_password_recovery[chrome] PASSED                                      [ 73%]
+tests/test_login.py::TestLogin::test_login_from_password_recovery[firefox] PASSED                                     [ 76%]
+tests/test_logout.py::TestLogOut::test_logout[chrome] PASSED                                                          [ 80%]
+**tests/test_logout.py::TestLogOut::test_logout[firefox] FAILED                                                         [ 84%]**
+tests/test_registration.py::TestRegistration::test_successful_registration[chrome] PASSED                             [ 88%]
+tests/test_registration.py::TestRegistration::test_successful_registration[firefox] PASSED                            [ 92%]
+tests/test_registration.py::TestRegistration::test_registration_with_invalid_password[chrome] PASSED                  [ 96%]
+tests/test_registration.py::TestRegistration::test_registration_with_invalid_password[firefox] PASSED             

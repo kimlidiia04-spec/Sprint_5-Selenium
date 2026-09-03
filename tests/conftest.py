@@ -40,3 +40,10 @@ def logged_in_driver(get_driver):
     wait.until(EC.url_to_be(Url.BASE_URL))
 
     return get_driver
+
+@pytest.fixture
+def personal_account_driver(logged_in_driver):
+    wait = WebDriverWait(logged_in_driver, 10)
+    logged_in_driver.find_element(*personal_account_button).click()
+    wait.until(EC.url_to_be(Url.BASE_URL + "account/profile"))
+    return logged_in_driver

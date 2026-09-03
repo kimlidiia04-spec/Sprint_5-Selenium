@@ -10,23 +10,18 @@ class TestConstructor:
     def test_personal_account(self, logged_in_driver):
         logged_in_driver.find_element(*personal_account_button).click()
 
-        assert WebDriverWait(logged_in_driver, 10).until(EC.url_to_be(Url.BASE_URL + "account/profile"))
+        assert WebDriverWait(logged_in_driver, 10).until(EC.url_to_be(Url.BASE_URL+"account/profile"))
 
     # ПЕРЕХОД ИЗ ЛИЧНОГО КАБИНЕТА В КОНСТРУКТОР
-    def test_constructor_from_personal_account(self, logged_in_driver):
-        logged_in_driver.find_element(*personal_account_button).click()
-        assert WebDriverWait(logged_in_driver, 10).until(EC.url_to_be(Url.BASE_URL + "account/profile"))
+    def test_constructor_from_personal_account(self, personal_account_driver):
+        personal_account_driver.find_element(*constructor_button).click()
+        assert WebDriverWait(personal_account_driver, 10).until(EC.url_to_be(Url.BASE_URL))
 
-        logged_in_driver.find_element(*constructor_button).click()
-        assert WebDriverWait(logged_in_driver, 10).until(EC.url_to_be(Url.BASE_URL))
 
     # ПЕРЕХОД НА ГЛАВНУЮ СТРАНИЦУ ПО ЛОГО
-    def test_logo_from_personal_account(self, logged_in_driver):
-        logged_in_driver.find_element(*personal_account_button).click()
-        assert WebDriverWait(logged_in_driver, 10).until(EC.url_to_be(Url.BASE_URL + "account/profile"))
-
-        logged_in_driver.find_element(*logo_button).click()
-        assert WebDriverWait(logged_in_driver, 10).until(EC.url_to_be(Url.BASE_URL))
+    def test_logo_from_personal_account(self, personal_account_driver):
+        personal_account_driver.find_element(*logo_button).click()
+        assert WebDriverWait(personal_account_driver, 10).until(EC.url_to_be(Url.BASE_URL))
 
     # РАЗДЕЛ "БУЛКИ" В КОНСТРУКТОРЕ
     def test_buns_tab(self, logged_in_driver):
